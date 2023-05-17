@@ -1,5 +1,5 @@
 <script setup>
-  import { onMounted, ref, defineProps } from "vue";
+  import { onMounted, ref, defineProps, computed } from "vue";
   import EventService from "@/services/EventService.js";
 
   const props = defineProps(["id"]);
