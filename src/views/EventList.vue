@@ -29,6 +29,7 @@
     });
   });
 </script>
+
 <template>
   <h1>Events for Good</h1>
   <div class="events">
