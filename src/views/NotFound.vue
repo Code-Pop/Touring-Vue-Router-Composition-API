@@ -1,12 +1,13 @@
 <script setup>
-  import { defineProps } from "vue";
-  defineProps({
-    resource: {
-      type: String,
-      required: true,
-      default: "page",
-    },
-  });
+import { defineProps } from "vue";
+
+defineProps({
+  resource: {
+    type: String,
+    required: true,
+    default: "page",
+  },
+});
 </script>
 <template>
   <h1>Oops!</h1>

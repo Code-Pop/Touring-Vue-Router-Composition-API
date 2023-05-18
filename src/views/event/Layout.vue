@@ -1,31 +1,31 @@
 <script setup>
-  import { onMounted, ref, defineProps, computed } from "vue";
-  import EventService from "@/services/EventService.js";
-  import { useRouter } from "vue-router";
+import { onMounted, ref, defineProps, computed } from "vue";
+import EventService from "@/services/EventService.js";
+import { useRouter } from "vue-router";
 
-  const props = defineProps(["id"]);
+const props = defineProps(["id"]);
 
-  const router = useRouter();
+const router = useRouter();
 
-  const id = computed(() => props.id);
+const id = computed(() => props.id);
 
-  const event = ref(null);
-  onMounted(() => {
-    EventService.getEvent(id.value)
-      .then((response) => {
-        event.value = response.data;
-      })
-      .catch((error) => {
-        if (error.response && error.response.status == 404) {
-          router.push({
-            name: "404Resource",
-            params: { resource: "event" },
-          });
-        } else {
-          router.push({ name: "NetworkError" });
-        }
-      });
-  });
+const event = ref(null);
+onMounted(() => {
+  EventService.getEvent(id.value)
+    .then((response) => {
+      event.value = response.data;
+    })
+    .catch((error) => {
+      if (error.response && error.response.status == 404) {
+        router.push({
+          name: "404Resource",
+          params: { resource: "event" },
+        });
+      } else {
+        router.push({ name: "NetworkError" });
+      }
+    });
+});
 </script>
 
 <template>
