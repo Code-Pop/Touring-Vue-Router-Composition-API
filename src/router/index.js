@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory } from "vue-router";
-import EventList from "../views/EventList.vue";
-import EventLayout from "../views/event/Layout.vue";
-import EventDetails from "../views/event/Details.vue";
-import EventRegister from "../views/event/Register.vue";
-import EventEdit from "../views/event/Edit.vue";
-import About from "../views/About.vue";
+import EventList from "@/views/EventList.vue";
+import EventLayout from "@/views/event/Layout.vue";
+import EventDetails from "@/views/event/Details.vue";
+import EventRegister from "@/views/event/Register.vue";
+import EventEdit from "@/views/event/Edit.vue";
+import About from "@/views/About.vue";
 
 const routes = [
   {
