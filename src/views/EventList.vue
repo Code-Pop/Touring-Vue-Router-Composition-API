@@ -1,19 +1,19 @@
 <script setup>
-  import EventCard from "@/components/EventCard.vue";
-  import EventService from "@/services/EventService.js";
-  import { onMounted, ref } from "vue";
+import EventCard from "@/components/EventCard.vue";
+import EventService from "@/services/EventService.js";
+import { onMounted, ref } from "vue";
 
-  const events = ref("");
+const events = ref("");
 
-  onMounted(() => {
-    EventService.getEvents()
-      .then((response) => {
-        events.value = response.data;
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  });
+onMounted(() => {
+  EventService.getEvents()
+    .then((response) => {
+      events.value = response.data;
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+});
 </script>
 
 <template>
@@ -24,9 +24,9 @@
 </template>
 
 <style scoped>
-  .events {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.events {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 </style>
