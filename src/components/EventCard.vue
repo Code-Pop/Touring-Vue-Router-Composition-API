@@ -1,4 +1,6 @@
 <script setup>
+import { defineProps } from "vue";
+
 defineProps({
   event: {
     type: Object,

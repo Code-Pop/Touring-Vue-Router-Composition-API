@@ -10,9 +10,16 @@ const router = useRouter();
 
 const events = ref(null);
 const totalEvents = ref(0);
+const events = ref(null);
+const totalEvents = ref(0);
 
 const page = computed(() => props.page);
+const page = computed(() => props.page);
 
+const hasNextPage = computed(() => {
+  const totalPages = Math.ceil(totalEvents.value / 2);
+  return page.value < totalPages;
+});
 const hasNextPage = computed(() => {
   const totalPages = Math.ceil(totalEvents.value / 2);
   return page.value < totalPages;
@@ -34,6 +41,7 @@ onMounted(() => {
 </script>
 
 <template>
+  <div>
   <h1>Events for Good</h1>
   <div class="events">
     <EventCard v-for="event in events" :key="event.id" :event="event" />
@@ -55,6 +63,7 @@ onMounted(() => {
         >Next &#62;</router-link
       >
     </div>
+    </div>
   </div>
 </template>
 
@@ -73,11 +82,31 @@ onMounted(() => {
   text-decoration: none;
   color: #2c3e50;
 }
+.events {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pagination {
+  display: flex;
+  width: 290px;
+}
+.pagination a {
+  flex: 1;
+  text-decoration: none;
+  color: #2c3e50;
+}
 
 #page-prev {
   text-align: left;
 }
+#page-prev {
+  text-align: left;
+}
 
+#page-next {
+  text-align: right;
+}
 #page-next {
   text-align: right;
 }
