@@ -29,6 +29,7 @@ onMounted(() => {
   });
 });
 </script>
+
 <template>
   <div>
   <h1>Events for Good</h1>

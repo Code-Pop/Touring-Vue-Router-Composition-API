@@ -17,6 +17,7 @@ onMounted(() => {
     });
 });
 </script>
+
 <template>
   <div v-if="event">
     <h1>{{ event.title }}</h1>

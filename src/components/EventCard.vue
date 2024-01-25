@@ -1,10 +1,12 @@
 <script setup>
-  defineProps({
-    event: {
-      type: Object,
-      required: true,
-    },
-  });
+import { defineProps } from "vue";
+
+defineProps({
+  event: {
+    type: Object,
+    required: true,
+  },
+});
 </script>
 
 <template>
