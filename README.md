@@ -1,3 +1,5 @@
+**This repository is for learning purposes only, it's not for production use.**
+
 # Vue-Router
 
 This template should help get you started developing with Vue 3 in Vite.
@@ -28,4 +30,3 @@ npm run dev
 npm run build
 ```
 
-**This repository is for learning purposes only, it's not for production use.**
